@@ -1,8 +1,9 @@
 import React from 'react'
-import { ListGroup, ListGroupItem } from 'react-bootstrap'
+import { ListGroup, ListGroupItem, ButtonGroup, Button } from 'react-bootstrap'
 
 // These are written bottom up, w.r.t. the component hierarchy.
 
+export const LIST_DISPLAY_MODE = 'list-display-mode'
 
 /** An element that displays the text contents of an email. */
 export function ContentsOfEmail(props) {
@@ -29,7 +30,7 @@ export function ListOfEmails(props) {
 }
 
 /** An element that displays the details of an email by composing
- * the following: HeaderOfEmail, ContentsOfEmail
+ * one HeaderOfEmai with one ContentsOfEmail
  **/
 export function DetailsOfEmail(props) {
     return (    
@@ -40,3 +41,22 @@ export function DetailsOfEmail(props) {
     )
 }
 
+
+/** An element that displays the given rows of text, as a
+ * Bootstrap ButtonGroup.
+ **/
+export function SideBar(props) {
+    const listItems = props.listOfStrings.map((string) => {
+        return (
+            <Button key={string}>{string}</Button>
+        )
+    })
+    return (<ButtonGroup vertical>{listItems}</ButtonGroup>)
+}
+
+/** An element that shows either a ListOfEmails, or a DetailsOfEmails */
+export function Body(props) {
+    if (props.displayMode === LIST_DISPLAY_MODE) {
+        return(<ListOfEmails rowsOfText={props.rowsOfText}/>)
+    }
+}
