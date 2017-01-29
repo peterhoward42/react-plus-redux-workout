@@ -20,10 +20,10 @@ export function HeaderOfEmail(props) {
  * Bootstrap ListGroup.
  **/
 export function ListOfEmails(props) {
-    return (
-        <ListGroup>
-            <ListGroupItem>Item 1</ListGroupItem>
-            <ListGroupItem>Item 2</ListGroupItem>
-            <ListGroupItem>Item 3</ListGroupItem>
-        </ListGroup>)
+    const listItems = props.rowsOfText.map((row) => {
+        return (
+            <ListGroupItem key={row}>{row}</ListGroupItem>
+        )
+    })
+    return (<ListGroup>{listItems}</ListGroup>)
 }
