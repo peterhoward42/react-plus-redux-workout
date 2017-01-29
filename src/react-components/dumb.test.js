@@ -31,4 +31,19 @@ it('ListOfEmails renders a Bootstrap ListGroup with injected content.', () => {
     expect(listGroupItem.childAt(0).text()).toEqual('Item B')
 })
 
+it('DetailsOfEmail composes the correct sub components, and passes the right props through.', () => {
+    const details = {
+        emailNumber: 3,
+        contentsText: 'XXX'
+    }
+    const wrapper = shallow(
+        <dumbComponents.DetailsOfEmail details={details} />
+    )
+    expect(wrapper.children().length).toEqual(2)
+    const emailHeader = wrapper.childAt(0)
+    expect(emailHeader.type()).toEqual(dumbComponents.HeaderOfEmail)
+    console.log(emailHeader.debug())
+    expect(emailHeader.emailNumber).toEqual(99)
+})
+
 

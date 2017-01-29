@@ -27,3 +27,16 @@ export function ListOfEmails(props) {
     })
     return (<ListGroup>{listItems}</ListGroup>)
 }
+
+/** An element that displays the details of an email by composing
+ * the following: HeaderOfEmail, ContentsOfEmail
+ **/
+export function DetailsOfEmail(props) {
+    return (    
+        <div>
+            <HeaderOfEmail emailNumber={props.details.emailNumber} />
+            <ContentsOfEmail contentsText={props.details.contentsText}/>
+        </div>
+    )
+}
+
