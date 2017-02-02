@@ -3,7 +3,8 @@ import { ListGroup, ListGroupItem, ButtonGroup, Button } from 'react-bootstrap'
 
 // These are written bottom up, w.r.t. the component hierarchy.
 
-export const LIST_DISPLAY_MODE = 'list-display-mode'
+export const LIST_MODE = 'list-display-mode'
+export const DETAILS_MODE = 'details-display-mode'
 
 /** An element that displays the text contents of an email. */
 export function ContentsOfEmail(props) {
@@ -33,14 +34,13 @@ export function ListOfEmails(props) {
  * one HeaderOfEmai with one ContentsOfEmail
  **/
 export function DetailsOfEmail(props) {
-    return (    
+    return (
         <div>
-            <HeaderOfEmail emailNumber={props.details.emailNumber} />
-            <ContentsOfEmail contentsText={props.details.contentsText}/>
+            <HeaderOfEmail emailNumber={props.header} />
+            <ContentsOfEmail contentsText={props.contents} />
         </div>
     )
 }
-
 
 /** An element that displays the given rows of text, as a
  * Bootstrap ButtonGroup.
@@ -54,9 +54,18 @@ export function SideBar(props) {
     return (<ButtonGroup vertical>{listItems}</ButtonGroup>)
 }
 
-/** An element that shows either a ListOfEmails, or a DetailsOfEmails */
+/** An element that shows either a ListOfEmails, or a DetailsOfEmails, depending
+ * on the viewing mode parameter provided.
+*/
 export function Body(props) {
-    if (props.displayMode === LIST_DISPLAY_MODE) {
-        return(<ListOfEmails rowsOfText={props.rowsOfText}/>)
+    switch (props.displayMode) {
+        case LIST_MODE:
+            return (<ListOfEmails rowsOfText={props.list} />)
+        case DETAILS_MODE:
+            return (<DetailsOfEmail
+                header={props.details.header}
+                contents={props.details.contents} />)
+        default:
+            throw ('Unrecognized display mode')
     }
 }
