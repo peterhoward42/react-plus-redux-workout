@@ -2,44 +2,56 @@
  */
 
 import React from 'react'
-import { ListGroup, ListGroupItem, ButtonGroup, Button } from 'react-bootstrap'
+import * as bs from 'react-bootstrap'
 
-/** Shows the contents of an email. */
-export function ContentsOfEmail(props) {
-    return (<div>{props.contentsText}</div>)
-}
-
-/** Shows the header of an email, parameterised by an email number. */
-export function HeaderOfEmail(props) {
-    return (<h3>Email #{props.emailNumber}</h3>)
-}
-
-/** Shows the given rows of text in a Bootstrap ListGroup. */
-export function ListOfEmails(props) {
-    const listItems = props.rowsOfText.map((row) => {
-        return (
-            <ListGroupItem key={row}>{row}</ListGroupItem>
-        )
-    })
-    return (<ListGroup>{listItems}</ListGroup>)
-}
-
-/** Shows the details of an email by compositing a header component and a contents component. */
-export function DetailsOfEmail(props) {
+export function BootstrapWrappedApp(props) {
     return (
-        <div>
-            <HeaderOfEmail emailNumber={props.header} />
-            <ContentsOfEmail contentsText={props.contents} />
+        <div className="container">
+            <bs.Grid>
+                <bs.Row>
+                    <bs.Col xs={2}>
+                        <SideBar folders={props.folders} />
+                    </bs.Col>
+                    <bs.Col xs={4}>
+                        <MainPanel listOfEmails={props.listOfEmails} />
+                    </bs.Col>
+                </bs.Row>
+            </bs.Grid>
         </div>
     )
 }
 
-/** Shows the given rows of text as menu items using a Bootstrap ButtonGroup. */
-export function ButtonGroupMenu(props) {
-    const listItems = props.listOfStrings.map((string) => {
+export function SideBar(props) {
+    return (
+        <MenuOfEmailFolders folders={props.folders} />
+    )
+}
+
+export function MainPanel(props) {
+    return (
+        <ListOfEmails list={props.listOfEmails} />
+    )
+}
+
+export function ContentsOfEmail(props) {
+    return (<div>{props.contentsText}</div>)
+}
+
+export function ListOfEmails(props) {
+    const listItems = props.list.map((row) => {
         return (
-            <Button key={string}>{string}</Button>
+            <bs.ListGroupItem key={row}>{row}</bs.ListGroupItem>
         )
     })
-    return (<ButtonGroup vertical>{listItems}</ButtonGroup>)
+    return (<bs.ListGroup>{listItems}</bs.ListGroup>)
 }
+
+export function MenuOfEmailFolders(props) {
+    const listItems = props.folders.map((string) => {
+        return (
+            <bs.Button key={string}>{string}</bs.Button>
+        )
+    })
+    return (<bs.ButtonGroup vertical>{listItems}</bs.ButtonGroup>)
+}
+

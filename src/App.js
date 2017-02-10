@@ -3,19 +3,21 @@ import './App.css';
 
 import * as presentation from './react-components/presentation.js'
 
-const LIST_OF_EMAILS = ['foo', 'bar', 'baz']
+const LIST_OF_EMAILS = [
+  'from pete to ali',
+  'from ali to pete',
+  'from ebay to rightmove'
+]
+
 const FOLDERS = ['inbox', 'sent items', 'drafts']
 
 class App extends Component {
   render() {
     return (
-      <div>
-        <presentation.ContentsOfEmail contentsText='ipsum' />
-        <presentation.HeaderOfEmail emailNumber='42' />
-        <presentation.ListOfEmails rowsOfText={LIST_OF_EMAILS} />
-        <presentation.DetailsOfEmail header='42' contents='ipsum' />
-        <presentation.ButtonGroupMenu listOfStrings={FOLDERS} />
-      </div>
+      <presentation.BootstrapWrappedApp
+        folders={FOLDERS}
+        listOfEmails={LIST_OF_EMAILS}>
+      </presentation.BootstrapWrappedApp>
     )
   }
 }
