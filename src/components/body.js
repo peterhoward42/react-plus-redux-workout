@@ -1,10 +1,10 @@
 import React from 'react'
 
-import Menu from './menu'
+import MenuContainer from '../containers/menu-container'
 
 const body = () => (
     <div>
-        <Menu />
+        <MenuContainer />
     </div>
 )
 

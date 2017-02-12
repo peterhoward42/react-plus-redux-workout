@@ -19,22 +19,26 @@ const menuItems = [
     }
 ]
 
-const Menu = () => (
-    <ListGroup>
+const Menu = (props) => {
+    return (< ListGroup >
         {
-            menuItems.map(item => (
-                <ListGroupItem >
-                    <MenuItem
-                        imageUrl={item.imageUrl}
-                        altText={item.altText}
-                        title={item.title}
-                        description={item.description}
-                    >
-                    </MenuItem>
-                </ListGroupItem>
-            ))
+            menuItems.map(item => {
+                const active = (item.title === props.selectedArticle) ? 'active' : ''
+
+                return (
+                    <ListGroupItem active={active} key={item.title}>
+                        <MenuItem
+                            imageUrl={item.imageUrl}
+                            altText={item.altText}
+                            title={item.title}
+                            description={item.description}
+                        >
+                        </MenuItem>
+                    </ListGroupItem>
+                )
+            })
         }
-    </ListGroup>
-)
+    </ListGroup >)
+}
 
 export default Menu

@@ -1,7 +1,7 @@
 import { CHOOSE_ARTICLE } from '../actions/action-types'
 
 const initialState = {
-    selectedArticle: undefined
+    selectedArticle: 'Learn about Merkle Trees and Bitcoin'
 }
 
 const menu = (state = initialState, action) => {
