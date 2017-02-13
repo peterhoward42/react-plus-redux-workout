@@ -5,7 +5,7 @@ import { Media } from 'react-bootstrap'
 
 const MenuItem = (props) => {
     return (
-        <Media>
+        <Media onClick={() => { props.onArticleChosen(props.title) }}>
             <Media.Left>
                 <img
                     width={64} height={64}
