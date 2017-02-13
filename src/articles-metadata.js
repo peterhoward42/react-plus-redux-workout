@@ -1,7 +1,5 @@
 
 const YOUTUBE_VIEW_T = 'youtubeview'
-const PDF_VIEW_T = 'pdfview'
-const IFRAME_VIEW_T = 'iframevew'
 const MARKDOWN_VIEW_T = 'mdview'
 
 const articlesSequence = [
@@ -46,7 +44,5 @@ export {
     viewTypeForTitle,
     articleSourceForTitle,
     YOUTUBE_VIEW_T,
-    PDF_VIEW_T,
-    IFRAME_VIEW_T,
     MARKDOWN_VIEW_T
 }
