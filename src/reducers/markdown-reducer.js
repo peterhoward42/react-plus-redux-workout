@@ -1,3 +1,10 @@
+import {
+    REQUESTED_MD,
+    RECEIVED_MD_DATA,
+    RECEIVED_MD_ERROR,
+    UNINITIALISED_MD
+} from '../actions/action-types'
+
 const makeState = (status, content) => (
     {
         fetchStatus: status,
@@ -5,21 +12,20 @@ const makeState = (status, content) => (
     }
 )
 
-const initialState = makeState(UNINITIALISED, '')
+const initialState = makeState(UNINITIALISED_MD, '')
 
 const markDownReducer = (state = initialState, action) => {
-    if (action.type != FETCH) {
-        return state
-    }
-    switch (action.status) {
-        case STARTED:
-            return makeState(STARTED, '')
-        case SUCCEEDED:
-            return makeState(SUCCEEDED, action.payload)
-        case FAILED:
-            return makeState(FAILED, '')
+    // Rather than make new state constants like 'waiting', we use the action
+    // keywords which imply state well enough.
+    switch (action.type) {
+        case REQUESTED_MD:
+            return makeState(REQUESTED_MD, '')
+        case RECEIVED_MD_DATA:
+            return makeState(RECEIVED_MD_DATA, action.payload)
+        case RECEIVED_MD_ERROR:
+            return makeState(RECEIVED_MD_ERROR, '')
         default:
-            throw new Error('unrecognized status: ' + status)
+            return state
     }
 }
 

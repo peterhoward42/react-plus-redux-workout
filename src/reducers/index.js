@@ -1,7 +1,7 @@
 import { combineReducers } from 'redux'
 
 import menuReducer from './menu-reducer'
-import mainPanel from './mainPanel'
+import mainPanelReducer from './main-panel-reducer'
 
 const topLevelReducer = combineReducers({
     menuReducer,

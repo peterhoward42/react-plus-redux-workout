@@ -1,5 +1,8 @@
 import { connect } from 'react-redux'
 
+import MarkdownView from '../components/markdown-view'
+
+
 const mapStateToProps = (state, ownProps) => {
     return {
         status: state.mainPanel.markdown.fetchStatus,
@@ -9,7 +12,6 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch, ownProps) => {
     return {}
-}
 }
 
 const MarkdownContainer = connect(

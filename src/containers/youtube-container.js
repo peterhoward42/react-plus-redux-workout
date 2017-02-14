@@ -1,5 +1,8 @@
 import { connect } from 'react-redux'
 
+import articleSourceForTitle from '../articles-metadata'
+import YoutubeView from '../components/youtube-view'
+
 const mapStateToProps = (state, ownProps) => {
     return {
         url: articleSourceForTitle(state.menu.chosen)
@@ -8,7 +11,6 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch, ownProps) => {
     return {}
-}
 }
 
 const YoutubeContainer = connect(

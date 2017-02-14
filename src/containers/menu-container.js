@@ -1,7 +1,7 @@
 import { connect } from 'react-redux'
 
 import Menu from '../components/menu'
-import chooseArticle from '../actions/choose-article'
+import articleChosen from '../actions/article-chosen'
 
 const mapStateToProps = (state, ownProps) => {
     return {
@@ -12,7 +12,7 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch, ownProps) => {
     return {
         onArticleChosen: (chosen) => {
-            dispatch(chooseArticle(chosen))
+            dispatch(articleChosen(chosen))
         }
     }
 }

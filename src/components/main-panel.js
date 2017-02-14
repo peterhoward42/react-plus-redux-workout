@@ -5,8 +5,8 @@ import {
     MARKDOWN_VIEW_T
 } from '../articles-metadata'
 
-import YouTubeView from '../components/you-tube-view'
-import MarkdownView from '../components/markdown-view'
+import YoutubeContainer from '../containers/youtube-container'
+import MarkdownContainer from '../containers/markdown-container'
 
 const MainPanel = (props) => {
     switch (props.viewType) {
