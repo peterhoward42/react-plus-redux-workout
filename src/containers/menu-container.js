@@ -5,7 +5,7 @@ import articleChosen from '../actions/article-chosen'
 
 const mapStateToProps = (state, ownProps) => {
     return {
-        selectedArticle: state.menu.selectedArticle
+        selectedArticle: state.menuReducer.selectedArticle
     }
 }
 

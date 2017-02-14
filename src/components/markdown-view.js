@@ -20,7 +20,7 @@ const MarkdownView = (props) => {
         case RECEIVED_MD_ERROR:
             return (<h3>the fetch failed boo hoo</h3>)
         case UNINITIALISED_MD:
-            return ({})
+            return null
         default:
             throw new Error('Unknown fetch status: ' + fetchStatus)
     }

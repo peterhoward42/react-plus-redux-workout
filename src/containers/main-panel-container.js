@@ -5,8 +5,8 @@ import { viewTypeForTitle, articleSourceForTitle } from '../articles-metadata'
 
 const mapStateToProps = (state, ownProps) => {
     return {
-        viewType: viewTypeForTitle(state.menu.selectedArticle),
-        articleSource: articleSourceForTitle(state.menu.selectedArticle)
+        viewType: viewTypeForTitle(state.menuReducer.selectedArticle),
+        articleSource: articleSourceForTitle(state.menuReducer.selectedArticle)
     }
 }
 

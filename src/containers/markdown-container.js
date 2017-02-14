@@ -4,9 +4,11 @@ import MarkdownView from '../components/markdown-view'
 
 
 const mapStateToProps = (state, ownProps) => {
+
+    console.log('markdown map state to props: ' + JSON.stringify(state))
     return {
-        status: state.mainPanel.markdown.fetchStatus,
-        markdownContent: state.mainPanel.markdown.content
+        fetchStatus: state.mainPanelReducer.markdownReducer.fetchStatus,
+        markdownContent: state.mainPanelReducer.markdownReducer.content
     }
 }
 
