@@ -6,41 +6,47 @@
 
 import fetch from 'isomorphic-fetch'
 
-function requestMd(uri) {
+import {
+    REQUESTED_MD,
+    RECEIVED_MD_DATA,
+    RECEIVED_MD_ERROR
+} from './action-types'
+
+function requestedMd(uri) {
     return {
-        type: REQUEST_MD,
+        type: REQUESTED_MD,
         uri
     }
 }
 
-function receiveMdPayload(uri, json) {
+function receivedMdPayload(uri, json) {
     return {
-        type: RECEIVE_MD,
+        type: RECEIVED_MD_DATA,
         uri,
         mdContent: json.data.dontknow,
     }
 }
 
-function receiveMdError() {
+function receivedMdError() {
     return {
-        type: RECEIVE_MD_ERROR,
+        type: RECEIVED_MD_ERROR,
     }
 }
 
-function fetchMd(uri) {
+function fetchingMd(uri) {
     // This action creator makes an async action by returning a function instead
-    // of an object. Thunk middleware, ensures the function when calle, 
+    // of an object. Thunk middleware, ensures the function when called, 
     // receives the dispatch function as a parameter so that it can then of
     // itself dispatch chained actions.
     return function (dispatch) {
         // Announce we launched the request.
-        dispatch(requestMd(uri))
+        dispatch(requestedMd(uri))
 
         // Return a chained promise
-        return fetch(uri).then(
+        return fetch(uri, { mode: 'no-cors' }).then(
             function (response) {
                 if (response.status >= 400) {
-                    return dispatch(receiveMdError())
+                    return dispatch(receivedMdError())
                 }
                 return dispatch(receivedMdPayload(uri, response.json()))
             }
@@ -48,4 +54,4 @@ function fetchMd(uri) {
     }
 }
 
-export default fetchMd
+export default fetchingMd
