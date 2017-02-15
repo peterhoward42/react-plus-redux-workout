@@ -1,7 +1,7 @@
 import { connect } from 'react-redux'
 
-import Menu from '../components/menu'
-import articleChosen from '../actions/article-chosen'
+import { Menu } from '../components/menu'
+import { articleChosen } from '../actions/article-chosen'
 
 import {
     viewTypeForTitle,
@@ -49,4 +49,4 @@ const MenuContainer = connect(
     mapDispatchToProps
 )(Menu)
 
-export default MenuContainer
+export { MenuContainer }

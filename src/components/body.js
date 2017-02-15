@@ -1,8 +1,8 @@
 import React from 'react'
 import { Row, Col } from 'react-bootstrap'
 
-import MenuContainer from '../containers/menu-container'
-import MainPanelContainer from '../containers/main-panel-container'
+import { MenuContainer } from '../containers/menu-container'
+import { MainPanelContainer } from '../containers/main-panel-container'
 
 const body = () => (
     <div>
@@ -17,4 +17,4 @@ const body = () => (
     </div>
 )
 
-export default body
+export { body }

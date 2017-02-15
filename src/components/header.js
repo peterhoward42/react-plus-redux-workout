@@ -10,4 +10,4 @@ const Header = () => (
     </Jumbotron >
 )
 
-export default Header 
+export { Header }

@@ -1,0 +1,57 @@
+Design Sequence 
+
+    Component Hierarchy
+    Min viable state model
+    Actions
+    Reducers
+    Containers
+    Actions stimulated by covered?
+
+Coding Sequence 
+
+    redux
+    Actions
+    reducers
+        with substance
+        just combined
+    components
+    containers (state to props)
+    containers (dispatch to props)
+
+Component Hierarchy
+
+    app
+        header
+        body
+            menu [activeKey, clickHandler]
+                menuItem [clickHandler]
+            mainPanel [viewType]
+                markdownView [markdownContent]
+                youTubeView [url]
+
+Min Viable State 
+
+    menuReducer
+        selectedArticleTitle
+
+Actions
+
+    articleChosen [articleTitle]
+s
+Reducers
+
+    menuReducer
+        on articleChosen -> set selectedArticleTitle
+
+Containers 
+
+    menuContainer
+        pass selectedArticleTitle into menu[activeKey]
+        pass clickHandler into menu[clickHandler]
+        respond to menu item click by emitting articleChosen
+    mainPanelContainer 
+        derive viewType from selectedArticleTitle
+    markdownViewContainer
+        derive markdownContent from selectedArticleTitle 
+    youtubeViewContainer
+        derive url from selectedArticleTitle

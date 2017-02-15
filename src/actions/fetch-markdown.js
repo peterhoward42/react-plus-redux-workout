@@ -2,6 +2,13 @@
  * A family of actions for fetching the contents of a markdown file from
  * a URI. The exported entry point action  fetchMd() is async, and will
  * dispatch subsequent sync actions on receipt of the payload, or on error.
+ * 
+ * THIS IS CURRENTLY NOT IN USE - BUT RETAINED TO SHOW HOW ASYNC ACTIONS CAN BE
+ * ASSEMBLED USING PROMISES IN COLLABORATION WITH THUNK MIDDLEWARE.
+ * 
+ * It didn't work out for fetching .md files because their sources raised CORS
+ * objections, which are cirumvented, but prevent the payload from being
+ * readable. (they are opaque).
  */
 
 import fetch from 'isomorphic-fetch'

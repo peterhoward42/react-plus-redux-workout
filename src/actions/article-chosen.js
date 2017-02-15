@@ -5,4 +5,4 @@ const articleChosen = (articleTitle) => ({
     articleTitle
 })
 
-export default articleChosen
+export { articleChosen }

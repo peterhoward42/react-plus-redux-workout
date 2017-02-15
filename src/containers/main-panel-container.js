@@ -1,12 +1,11 @@
 import { connect } from 'react-redux'
 
-import MainPanel from '../components/main-panel'
-import { viewTypeForTitle, articleSourceForTitle } from '../articles-metadata'
+import { MainPanel } from '../components/main-panel'
+import { viewTypeForTitle } from '../articles-metadata'
 
 const mapStateToProps = (state, ownProps) => {
     return {
-        viewType: viewTypeForTitle(state.menuReducer.selectedArticle),
-        articleSource: articleSourceForTitle(state.menuReducer.selectedArticle)
+        viewType: viewTypeForTitle(state.menuReducer.selectedArticle)
     }
 }
 
@@ -19,4 +18,4 @@ const MainPanelContainer = connect(
     mapDispatchToProps
 )(MainPanel)
 
-export default MainPanelContainer
+export { MainPanelContainer }

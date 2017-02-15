@@ -20,4 +20,4 @@ const MenuItem = (props) => {
     )
 }
 
-export default MenuItem
+export { MenuItem }

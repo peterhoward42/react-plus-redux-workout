@@ -2,14 +2,14 @@ import React from 'react'
 
 import { ListGroup, ListGroupItem } from 'react-bootstrap'
 
-import MenuItem from './menu-item'
+import { MenuItem } from './menu-item'
 import { articlesSequence } from '../articles-metadata'
 
 const Menu = (props) => {
     return (< ListGroup >
         {
             articlesSequence.map(article => {
-                const active = (article.title === props.selectedArticle) ? 'active' : ''
+                const active = (article.title === props.activeArticle) ? 'active' : ''
 
                 return (
                     <ListGroupItem
@@ -31,4 +31,4 @@ const Menu = (props) => {
     </ListGroup >)
 }
 
-export default Menu
+export { Menu }
