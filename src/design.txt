@@ -24,17 +24,17 @@ Component Hierarchy
                 menuScreen
                     header
                     menu
-                contentScreen
-                    backBar
-                    contentMedia
+                articleScreen
+                    backButtonHeader
+                    articleMedia
                     contentTitles
-                    contentNarrative
+                    articleNarrative
             desktop
                 header
                 desktopColumns
                     menu
-                    contentMedia
-                    contentNarrative
+                    articleMedia
+                    articleNarrative
 
     menu
         menuItem

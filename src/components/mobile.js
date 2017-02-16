@@ -3,7 +3,7 @@ import { Grid, Row, Col } from 'react-bootstrap'
 
 
 import { MenuScreen } from './menu-screen'
-import { ArticleScreen } from './content-screen'
+import { ArticleScreen } from './article-screen'
 
 const SHOW_MENU = 'showmenu'
 const SHOW_ARTICLE = 'showarticle'

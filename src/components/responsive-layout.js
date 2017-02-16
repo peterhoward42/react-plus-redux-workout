@@ -1,14 +1,13 @@
 import React from 'react'
 import MediaQuery from 'react-responsive'
 
-import { Mobile } from './mobile'
+import { MobileContainer } from '../containers/mobile-container'
 import { Desktop } from './desktop'
-import { SHOW_MENU } from './mobile'
 
 const ResponsiveLayout = () => (
     <div>
         <MediaQuery query='(max-width: 1224px)'>
-            <Mobile viewMode={SHOW_MENU} />
+            <MobileContainer />
         </MediaQuery>
         <MediaQuery query='(min-width: 1224px)'>
             <Desktop />
