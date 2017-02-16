@@ -9,7 +9,7 @@ const Menu = (props) => {
     return (< ListGroup >
         {
             articlesSequence.map(article => {
-                const active = (article.title === props.activeArticle) ? 'active' : ''
+                const active = (article.title === props.selectedArticle) ? 'active' : ''
 
                 return (
                     <ListGroupItem

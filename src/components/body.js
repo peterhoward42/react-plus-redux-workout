@@ -4,7 +4,7 @@ import { Row, Col } from 'react-bootstrap'
 import { MenuContainer } from '../containers/menu-container'
 import { MainPanelContainer } from '../containers/main-panel-container'
 
-const body = () => (
+const Body = () => (
     <div>
         <Row>
             <Col xs={4}>
@@ -17,4 +17,4 @@ const body = () => (
     </div>
 )
 
-export { body }
+export { Body }

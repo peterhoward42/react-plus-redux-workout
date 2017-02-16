@@ -1,57 +1,59 @@
 Design Sequence 
 
     Component Hierarchy
-    Min viable state model
+    Min viable state model and Reducers
     Actions
-    Reducers
     Containers
     Actions stimulated by covered?
 
-Coding Sequence 
-
+Coding Sequence
+    
     redux
-    Actions
-    reducers
-        with substance
-        just combined
-    components
-    containers (state to props)
-    containers (dispatch to props)
+        Actions
+        reducers
+            those with substance
+            just combiners
+        Tests
+    components iterively top down including containers
 
 Component Hierarchy
 
     app
-        header
-        body
-            menu [activeKey, clickHandler]
-                menuItem [clickHandler]
-            mainPanel [viewType]
-                markdownView [markdownContent]
-                youTubeView [url]
+        responsiveLayout
+            mobile
+                menuScreen
+                    header
+                    menu
+                contentScreen
+                    backBar
+                    contentMedia
+                    contentTitles
+                    contentNarrative
+            desktop
+                header
+                desktopColumns
+                    menu
+                    contentMedia
+                    contentNarrative
 
-Min Viable State 
+    menu
+        menuItem
 
-    menuReducer
+    contentMedia
+        videoView
+        pdfView
+        anoView
+
+Min Viable State & Reducers
+
+    menu
         selectedArticleTitle
+    mobile
+        viewMode [menu or content]
 
 Actions
 
     articleChosen [articleTitle]
-s
-Reducers
+    selectedMobileViewMode
 
-    menuReducer
-        on articleChosen -> set selectedArticleTitle
-
-Containers 
-
-    menuContainer
-        pass selectedArticleTitle into menu[activeKey]
-        pass clickHandler into menu[clickHandler]
-        respond to menu item click by emitting articleChosen
-    mainPanelContainer 
-        derive viewType from selectedArticleTitle
-    markdownViewContainer
-        derive markdownContent from selectedArticleTitle 
-    youtubeViewContainer
-        derive url from selectedArticleTitle
+Containers
