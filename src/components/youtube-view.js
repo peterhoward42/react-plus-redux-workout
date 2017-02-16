@@ -1,8 +1,8 @@
 import React from 'react'
 
-import YouTube from 'react-youtube'
+import ReactPlayer from 'react-player'
 
 const YoutubeView = (props) => {
-    return (< YouTube videoId={props.videoId} />)
+    return (< ReactPlayer url={props.videoId} controls={true} />)
 }
 export { YoutubeView }

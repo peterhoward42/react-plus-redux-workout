@@ -20,7 +20,7 @@ const Menu = (props) => {
                             imageUrl={article.imageUrl}
                             altText={article.altText}
                             title={article.title}
-                            description={article.description}
+                            description={article.short}
                             onArticleChosen={props.onArticleChosen}
                         >
                         </MenuItem>
