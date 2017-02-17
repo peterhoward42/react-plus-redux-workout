@@ -5,17 +5,26 @@ import { Panel } from 'react-bootstrap'
 
 import { ArticleMediaContainer } from '../containers/article-media-container'
 import { BackButtonBarContainer } from '../containers/back-button-bar-container'
+import { ArticleDescriptionContainer } from '../containers/article-description-container'
+import { ArticleTitlePanel } from './article-title-panel'
 
-const ArticleScreen = () => {
+const ArticleScreen = (props) => {
     return (
         <div>
             <Panel>
                 <BackButtonBarContainer />
             </Panel>
             <Panel>
+                <ArticleTitlePanel
+                    title={props.title}
+                    subTitle={props.subTitle} />
+            </Panel>
+            <Panel>
                 <ArticleMediaContainer />
             </Panel>
-            <h3>after</h3>
+            <Panel>
+                <ArticleDescriptionContainer />
+            </Panel>
         </div>
     )
 }

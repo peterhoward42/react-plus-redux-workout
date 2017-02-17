@@ -44,11 +44,16 @@ const descriptionForTitle = (title) => {
     return articleFromTitle[title].description
 }
 
+const shortForTitle = (title) => {
+    return articleFromTitle[title].short
+}
+
 export {
     firstArticle,
     articlesSequence,
     viewTypeForTitle,
     descriptionForTitle,
+    shortForTitle,
     articleSourceForTitle,
     YOUTUBE_VIEW_T,
     MARKDOWN_VIEW_T

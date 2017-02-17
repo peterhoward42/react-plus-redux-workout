@@ -3,7 +3,7 @@ import { Grid, Row, Col } from 'react-bootstrap'
 
 
 import { MenuScreen } from './menu-screen'
-import { ArticleScreen } from './article-screen'
+import { ArticleScreenContainer } from '../containers/article-screen-container'
 
 const SHOW_MENU = 'showmenu'
 const SHOW_ARTICLE = 'showarticle'
@@ -13,7 +13,7 @@ const chooseWhichScreen = (viewMode) => {
         case SHOW_MENU:
             return <MenuScreen />
         case SHOW_ARTICLE:
-            return <ArticleScreen />
+            return <ArticleScreenContainer />
         default:
             throw new Error('Unrecognized view mode: ' + viewMode)
     }
