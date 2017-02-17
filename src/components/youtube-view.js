@@ -1,8 +1,28 @@
 import React from 'react'
 
-import ReactPlayer from 'react-player'
+import YouTube from 'react-youtube'
+import Measure from 'react-measure'
 
 const YoutubeView = (props) => {
-    return (< ReactPlayer url={props.videoId} controls={true} />)
+    return (
+        <Measure>
+            {
+                ({width}) =>
+                    <div>
+                        <div>
+                            My width is {width}
+                        </div>
+                        <YouTube
+                            videoId={props.videoId}
+                            opts={{
+                                width: width,
+
+                            }}
+                        >
+                        </YouTube>
+                    </div>
+            }
+        </Measure >
+    )
 }
 export { YoutubeView }

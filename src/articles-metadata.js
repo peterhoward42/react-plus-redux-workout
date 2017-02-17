@@ -18,7 +18,7 @@ const articlesSequence = [
         imageUrl: 'http://peterhoward42.wim42.webfactional.com/media/lure-image.jpg',
         altText: 'Lure',
         viewType: YOUTUBE_VIEW_T,
-        articleSource: 'https://youtu.be/ld_PXgPw3AI',
+        articleSource: 'ld_PXgPw3AI',
         description: 'a description about pattern stuff'
     }
 ]
@@ -58,3 +58,5 @@ export {
     YOUTUBE_VIEW_T,
     MARKDOWN_VIEW_T
 }
+
+// articleSource: 'https://youtu.be/ld_PXgPw3AI',
