@@ -1,16 +1,16 @@
 import React from 'react'
 import MediaQuery from 'react-responsive'
 
-import { MobileContainer } from '../containers/mobile-container'
-import { Desktop } from './desktop'
+import { MobileLayout } from './mobile/mobile-layout'
+import { DesktopLayout } from './desktop/desktop-layout'
 
 const ResponsiveLayout = () => (
     <div>
         <MediaQuery query='(max-width: 1224px)'>
-            <MobileContainer />
+            <MobileLayout />
         </MediaQuery>
         <MediaQuery query='(min-width: 1224px)'>
-            <Desktop />
+            <DesktopLayout />
         </MediaQuery>
     </div>
 )

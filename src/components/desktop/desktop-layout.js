@@ -1,12 +1,12 @@
 import React from 'react'
 import { Grid, Row, Col, Panel } from 'react-bootstrap'
 
-import { Header } from './header'
-import { MenuContainer } from '../containers/menu-container'
-import { ArticleMediaContainer } from '../containers/article-media-container'
-import { ArticleDescriptionContainer } from '../containers/article-description-container'
+import { Header } from '../header'
+import { MenuContainer } from '../../containers/menu-container'
+import { ArticleMedia } from '../article-media'
+import { ArticleDescription } from '../article-description'
 
-const Desktop = (props) => {
+const DesktopLayout = (props) => {
     return (
         <Grid>
             <Row>
@@ -19,9 +19,9 @@ const Desktop = (props) => {
                     <MenuContainer />
                 </Col>
                 <Col sm={8}>
-                    <ArticleDescriptionContainer />
+                    <ArticleDescription article={props.article} />
                     <Panel>
-                        <ArticleMediaContainer />
+                        <ArticleMedia article={props.article} />
                     </Panel>
                 </Col>
             </Row>
@@ -29,4 +29,4 @@ const Desktop = (props) => {
     )
 }
 
-export { Desktop }
+export { DesktopLayout }

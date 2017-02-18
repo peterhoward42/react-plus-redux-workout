@@ -4,29 +4,28 @@ import {
     Panel, ListGroup, ListGroupItem
 } from 'react-bootstrap'
 
+import { BackButtonBarContainer } from '../../containers/mobile/back-button-bar-container'
+import { ArticleDescription } from '../article-description'
+import { ArticleTitlePanel } from '../article-title-panel'
+import { ArticleMedia } from '../article-media'
 
-import { ArticleMediaContainer } from '../containers/article-media-container'
-import { BackButtonBarContainer } from '../containers/back-button-bar-container'
-import { ArticleDescriptionContainer } from '../containers/article-description-container'
-import { ArticleTitlePanel } from './article-title-panel'
 
 const ArticleScreen = (props) => {
+    const article = props.article
     return (
         <div>
             <BackButtonBarContainer />
             <ListGroup>
                 <ListGroupItem bsStyle="info">
-                    <ArticleTitlePanel
-                        title={props.title}
-                        subTitle={props.subTitle} />
+                    <ArticleTitlePanel article={article} />
                 </ListGroupItem>
                 <ListGroupItem>
                     <Panel>
-                        <ArticleMediaContainer />
+                        <ArticleMedia article={article} />
                     </Panel>
                 </ListGroupItem>
                 <ListGroupItem >
-                    <ArticleDescriptionContainer />
+                    <ArticleDescription article={article} />
                 </ListGroupItem>
             </ListGroup>
         </div >

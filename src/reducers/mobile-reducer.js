@@ -1,6 +1,6 @@
 import { ARTICLE_CHOSEN, BACK_TO_MENU } from '../actions/action-types'
 
-import { SHOW_MENU, SHOW_ARTICLE } from '../components/mobile'
+import { SHOW_MENU, SHOW_ARTICLE } from '../components/mobile/mobile-screen-chooser'
 
 const makeState = (viewMode) => (
     {

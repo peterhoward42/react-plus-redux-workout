@@ -1,6 +1,6 @@
 import { connect } from 'react-redux'
 
-import { Mobile } from '../components/mobile'
+import MobileScreenChooser from '../../components/mobile/mobile-screen-chooser'
 
 const mapStateToProps = (state, ownProps) => {
     return {
@@ -12,9 +12,9 @@ const mapDispatchToProps = (dispatch, ownProps) => {
     return {}
 }
 
-const MobileContainer = connect(
+const MobileScreenChooserContainer = connect(
     mapStateToProps,
     mapDispatchToProps
-)(Mobile)
+)(MobileScreenChooser)
 
-export { MobileContainer }
+export { MobileScreenChooserContainer }

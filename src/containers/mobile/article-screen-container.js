@@ -1,12 +1,11 @@
 import { connect } from 'react-redux'
 
-import { ArticleScreen } from '../components/article-screen'
+import { ArticleScreen } from '../../components/mobile/article-screen'
 
 
 const mapStateToProps = (state, ownProps) => {
     return {
-        title: state.menuReducer.selectedArticle.title,
-        subTitle: state.menuReducer.selectedArticle.short
+        article: state.menuReducer.selectedArticle,
     }
 }
 
