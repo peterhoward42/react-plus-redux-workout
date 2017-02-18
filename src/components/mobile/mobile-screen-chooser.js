@@ -1,7 +1,7 @@
 import React from 'react'
 
-import MenuScreen from './menu-screen'
-import ArticleScreenContainer from '../../containers/mobile/article-screen-container'
+import { MenuScreen } from './menu-screen'
+import { ArticleScreenContainer } from '../../containers/mobile/article-screen-container'
 
 const SHOW_MENU = 'showmenu'
 const SHOW_ARTICLE = 'showarticle'
@@ -17,4 +17,4 @@ const MobileScreenChooser = (props) => {
     }
 }
 
-export { MobileScreenChooser }
+export { MobileScreenChooser, SHOW_MENU, SHOW_ARTICLE }

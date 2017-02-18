@@ -11,6 +11,7 @@ const makeState = (viewMode) => (
 const initialState = makeState(SHOW_MENU)
 
 const mobileReducer = (state = initialState, action) => {
+    console.log(`xxxxx in mobile reducer, action received is ${JSON.stringify(action, null, 2)}`)
     switch (action.type) {
         case ARTICLE_CHOSEN:
             return makeState(SHOW_ARTICLE)

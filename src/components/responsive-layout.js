@@ -13,6 +13,7 @@ const ResponsiveLayout = () => (
             <DesktopLayout />
         </MediaQuery>
     </div>
+
 )
 
 export { ResponsiveLayout }

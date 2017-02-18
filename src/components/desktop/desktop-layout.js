@@ -1,10 +1,9 @@
 import React from 'react'
-import { Grid, Row, Col, Panel } from 'react-bootstrap'
+import { Grid, Row, Col } from 'react-bootstrap'
 
 import { Header } from '../header'
 import { MenuContainer } from '../../containers/menu-container'
-import { ArticleMedia } from '../article-media'
-import { ArticleDescription } from '../article-description'
+import { ArticleDisplayAreaContainer } from '../../containers/desktop/article-display-area-container'
 
 const DesktopLayout = (props) => {
     return (
@@ -19,10 +18,7 @@ const DesktopLayout = (props) => {
                     <MenuContainer />
                 </Col>
                 <Col sm={8}>
-                    <ArticleDescription article={props.article} />
-                    <Panel>
-                        <ArticleMedia article={props.article} />
-                    </Panel>
+                    <ArticleDisplayAreaContainer />
                 </Col>
             </Row>
         </Grid>
