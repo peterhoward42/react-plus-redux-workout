@@ -1,13 +1,12 @@
 import { connect } from 'react-redux'
 
 import { ArticleScreen } from '../components/article-screen'
-import { articleFromTitle } from '../articles-metadata'
 
 
 const mapStateToProps = (state, ownProps) => {
     return {
-        title: state.menuReducer.selectedArticle,
-        subTitle: articleFromTitle[state.menuReducer.selectedArticle].short
+        title: state.menuReducer.selectedArticle.title,
+        subTitle: state.menuReducer.selectedArticle.short
     }
 }
 

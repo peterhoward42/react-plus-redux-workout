@@ -1,8 +1,8 @@
 import { ARTICLE_CHOSEN } from './action-types'
 
-const articleChosen = (articleTitle) => ({
+const articleChosen = (article) => ({
     type: ARTICLE_CHOSEN,
-    articleTitle
+    article
 })
 
 export { articleChosen }

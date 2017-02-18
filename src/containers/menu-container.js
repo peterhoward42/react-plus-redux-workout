@@ -1,18 +1,19 @@
 import { connect } from 'react-redux'
 
 import { Menu } from '../components/menu'
+import { articleFromTitle } from '../articles-metadata'
 import { articleChosen } from '../actions/article-chosen'
 
 const mapStateToProps = (state, ownProps) => {
     return {
-        selectedArticle: state.menuReducer.selectedArticle
+        selectedArticle: state.menuReducer.selectedArticle.title
     }
 }
 
 const mapDispatchToProps = (dispatch, ownProps) => {
     return {
-        onArticleChosen: (chosen) => {
-            dispatch(articleChosen(chosen))
+        onArticleChosen: (articleTitle) => {
+            dispatch(articleChosen(articleFromTitle[articleTitle]))
         }
     }
 }

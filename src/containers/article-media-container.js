@@ -2,11 +2,9 @@ import { connect } from 'react-redux'
 
 import { ArticleMedia } from '../components/article-media'
 
-import { articleFromTitle } from '../articles-metadata'
-
 const mapStateToProps = (state, ownProps) => {
     return {
-        viewType: articleFromTitle[state.menuReducer.selectedArticle].viewType
+        viewType: state.menuReducer.selectedArticle.viewType
     }
 }
 

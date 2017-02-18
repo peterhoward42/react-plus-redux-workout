@@ -1,12 +1,10 @@
 import { connect } from 'react-redux'
 
 import { ArticleDescription } from '../components/article-description'
-import { articleFromTitle } from '../articles-metadata'
 
 const mapStateToProps = (state, ownProps) => {
     return {
-        contentText: articleFromTitle[
-            state.menuReducer.selectedArticle].description
+        contentText: state.menuReducer.selectedArticle.description
     }
 }
 
