@@ -1,9 +1,9 @@
 import { ARTICLE_CHOSEN } from '../actions/action-types'
 
-import { firstArticle } from '../articles-metadata'
+import { articlesSequence } from '../articles-metadata'
 
 const initialState = {
-    selectedArticle: firstArticle().title
+    selectedArticle: articlesSequence[0].title
 }
 
 const menuReducer = (state = initialState, action) => {

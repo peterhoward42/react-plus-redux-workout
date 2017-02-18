@@ -1,11 +1,12 @@
 import { connect } from 'react-redux'
 
-import { articleSourceForTitle } from '../articles-metadata'
+import { articleFromTitle } from '../articles-metadata'
 import { YoutubeView } from '../components/youtube-view'
 
 const mapStateToProps = (state, ownProps) => {
     return {
-        videoId: articleSourceForTitle(state.menuReducer.selectedArticle)
+        videoId: articleFromTitle[
+            state.menuReducer.selectedArticle].articleSource
     }
 }
 

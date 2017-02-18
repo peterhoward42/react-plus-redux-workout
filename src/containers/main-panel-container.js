@@ -1,11 +1,11 @@
 import { connect } from 'react-redux'
 
 import { MainPanel } from '../components/main-panel'
-import { viewTypeForTitle } from '../articles-metadata'
+import { articleFromTitle } from '../articles-metadata'
 
 const mapStateToProps = (state, ownProps) => {
     return {
-        viewType: viewTypeForTitle(state.menuReducer.selectedArticle)
+        viewType: articleFromTitle[state.menuReducer.selectedArticle].viewType
     }
 }
 

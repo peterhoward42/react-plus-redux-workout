@@ -28,33 +28,9 @@ articlesSequence.forEach((article, idx) => {
     articleFromTitle[article.title] = article
 })
 
-const firstArticle = () => {
-    return articlesSequence[0]
-}
-
-const viewTypeForTitle = (title) => {
-    return articleFromTitle[title].viewType
-}
-
-const articleSourceForTitle = (title) => {
-    return articleFromTitle[title].articleSource
-}
-
-const descriptionForTitle = (title) => {
-    return articleFromTitle[title].description
-}
-
-const shortForTitle = (title) => {
-    return articleFromTitle[title].short
-}
 
 export {
-    firstArticle,
-    articlesSequence,
-    viewTypeForTitle,
-    descriptionForTitle,
-    shortForTitle,
-    articleSourceForTitle,
+    articlesSequence, articleFromTitle,
     YOUTUBE_VIEW_T,
     MARKDOWN_VIEW_T
 }
