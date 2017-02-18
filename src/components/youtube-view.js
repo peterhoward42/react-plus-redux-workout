@@ -9,9 +9,6 @@ const YoutubeView = (props) => {
             {
                 ({width}) =>
                     <div>
-                        <div>
-                            My width is {width}
-                        </div>
                         <YouTube
                             videoId={props.videoId}
                             opts={{

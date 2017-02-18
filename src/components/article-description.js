@@ -3,9 +3,9 @@ import { Panel } from 'react-bootstrap'
 
 const ArticleDescription = (props) => {
     return (
-        <Panel>
+        <p>
             {props.contentText}
-        </Panel >)
+        </p >)
 }
 
 export { ArticleDescription }

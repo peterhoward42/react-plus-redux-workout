@@ -1,6 +1,8 @@
 import React from 'react'
 
-import { Panel } from 'react-bootstrap'
+import {
+    Panel, ListGroup, ListGroupItem
+} from 'react-bootstrap'
 
 
 import { ArticleMediaContainer } from '../containers/article-media-container'
@@ -11,21 +13,23 @@ import { ArticleTitlePanel } from './article-title-panel'
 const ArticleScreen = (props) => {
     return (
         <div>
-            <Panel>
-                <BackButtonBarContainer />
-            </Panel>
-            <Panel>
-                <ArticleTitlePanel
-                    title={props.title}
-                    subTitle={props.subTitle} />
-            </Panel>
-            <Panel>
-                <ArticleMediaContainer />
-            </Panel>
-            <Panel>
-                <ArticleDescriptionContainer />
-            </Panel>
-        </div>
+            <BackButtonBarContainer />
+            <ListGroup>
+                <ListGroupItem bsStyle="info">
+                    <ArticleTitlePanel
+                        title={props.title}
+                        subTitle={props.subTitle} />
+                </ListGroupItem>
+                <ListGroupItem>
+                    <Panel>
+                        <ArticleMediaContainer />
+                    </Panel>
+                </ListGroupItem>
+                <ListGroupItem >
+                    <ArticleDescriptionContainer />
+                </ListGroupItem>
+            </ListGroup>
+        </div >
     )
 }
 
