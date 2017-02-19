@@ -13,8 +13,9 @@
 
 import { connect } from 'react-redux'
 
-import { BackButtonBar } from '../../components/mobile/back-button-bar'
+import { ArticleNavBar } from '../../components/mobile/article-nav-bar'
 import { goBackToMenuScreen } from '../../actions/go-back-to-menu-screen'
+import { navNextPrevArticle } from '../../actions/nav-next-prev-article'
 
 const mapStateToProps = (state, ownProps) => {
     return {}
@@ -22,13 +23,15 @@ const mapStateToProps = (state, ownProps) => {
 
 const mapDispatchToProps = (dispatch, ownProps) => {
     return {
-        onBackButtonClicked: () => dispatch(goBackToMenuScreen())
+        onMenuButtonClicked: () => dispatch(goBackToMenuScreen()),
+        onNextArticleClicked: () => dispatch(navNextPrevArticle(+1)),
+        onPrevArticleClicked: () => dispatch(navNextPrevArticle(-1))
     }
 }
 
-const BackButtonBarContainer = connect(
+const ArticleNavBarContainer = connect(
     mapStateToProps,
     mapDispatchToProps
-)(BackButtonBar)
+)(ArticleNavBar)
 
-export { BackButtonBarContainer }
+export { ArticleNavBarContainer }

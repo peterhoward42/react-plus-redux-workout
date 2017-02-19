@@ -28,7 +28,7 @@ const mapStateToProps = (state, ownProps) => {
 const mapDispatchToProps = (dispatch, ownProps) => {
     return {
         onArticleChosen: (articleTitle) => {
-            dispatch(articleChosen(articleFromTitle[articleTitle]))
+            dispatch(articleChosen(articleFromTitle(articleTitle)))
         }
     }
 }

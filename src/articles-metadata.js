@@ -2,9 +2,7 @@
  * This is the single source of truth about which articles this app will display.
  * 
  * The sequence is significant, because it governs the sequence of items
- * in the menu. The only state that is held by the app about which article
- * is selected is the article's title. You can use this title as a key to 
- * access the full article object in the articleFromTitle[] map.
+ * in the menu.
  */
 
 
@@ -31,14 +29,27 @@ const articlesSequence = [
     }
 ]
 
-const articleFromTitle = {}
-articlesSequence.forEach((article, idx) => {
-    articleFromTitle[article.title] = article
-})
+/**
+ * A query that returns the article which has the given title.
+ */
+const articleFromTitle = (title) => {
+    return articlesSequence.find((article) => { return article.title === title })
+}
+
+/**
+ * A query that returns the article that is <increment> beyond the given 
+ * article in the sequence. The arithmetic wraps round at both ends.
+ */
+const neighbourArticle = (originArticle, incrementIndexBy) => {
+    const existingIndex = articlesSequence.indexOf(originArticle)
+    const length = articlesSequence.length
+    let newIndex = (existingIndex + incrementIndexBy) % length
+    while (newIndex < 0)
+        newIndex += length
+    return articlesSequence[newIndex]
+}
 
 
 export {
-    articlesSequence, articleFromTitle,
-    YOUTUBE_VIEW_T,
-
+    articlesSequence, articleFromTitle, neighbourArticle, YOUTUBE_VIEW_T
 }
