@@ -1,3 +1,12 @@
+/**
+ * This app uses different layout and navigation UXP for desktop and mobile
+ * screen sizes.
+ * 
+ * This React elemement sits near the top of the element display hierarchy,
+ * and takes responsibility for meausuring the space available, and rendering
+ * either the mobile or desktop variant accordingly.
+ */
+
 import React from 'react'
 import MediaQuery from 'react-responsive'
 

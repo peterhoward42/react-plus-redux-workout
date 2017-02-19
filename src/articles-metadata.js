@@ -1,3 +1,12 @@
+/**
+ * This is the single source of truth about which articles this app will display.
+ * 
+ * The sequence is significant, because it governs the sequence of items
+ * in the menu. The only state that is held by the app about which article
+ * is selected is the article's title. You can use this title as a key to 
+ * access the full article object in the articleFromTitle[] map.
+ */
+
 
 const YOUTUBE_VIEW_T = 'youtubeview'
 
@@ -33,5 +42,3 @@ export {
     YOUTUBE_VIEW_T,
 
 }
-
-// articleSource: 'https://youtu.be/ld_PXgPw3AI',

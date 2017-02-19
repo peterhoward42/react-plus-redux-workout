@@ -1,3 +1,12 @@
+/**
+ * Both the mobile and desktop presentations of the app include a menu from
+ * which you can choose an article. The menu is implemented using a high level
+ * component from the Bootstrap library which gives complete freedom over how
+ * each menu item is built.
+ * 
+ * This React element is that menu.
+ */
+
 import React from 'react'
 
 import { ListGroup, ListGroupItem } from 'react-bootstrap'

@@ -1,3 +1,8 @@
+/**
+ * This is the Redux REDUCER that looks after which article has been
+ * selected by the user.
+ */
+
 import { ARTICLE_CHOSEN } from '../actions/action-types'
 
 import { articlesSequence } from '../articles-metadata'

@@ -1,5 +1,5 @@
 /**
- * A family of actions for fetching the contents of a markdown file from
+ * A family of Redux ACTIONS for fetching the contents of a markdown file from
  * a URI. The exported entry point action  fetchMd() is async, and will
  * dispatch subsequent sync actions on receipt of the payload, or on error.
  * 
@@ -9,6 +9,8 @@
  * It didn't work out for fetching .md files because their sources raised CORS
  * objections, which are cirumvented, but prevent the payload from being
  * readable. (they are opaque).
+ * 
+ * TODO: Upgrade from promises to ES7 await/async. 
  */
 
 import fetch from 'isomorphic-fetch'
@@ -19,6 +21,7 @@ import {
     RECEIVED_MD_ERROR
 } from './action-types'
 
+// Private action creator - announcing that a request has been launched.
 function requestedMd(uri) {
     return {
         type: REQUESTED_MD,
@@ -26,6 +29,7 @@ function requestedMd(uri) {
     }
 }
 
+// Private action creator - announcing that a response has been received.
 function receivedMdPayload(uri, json) {
     return {
         type: RECEIVED_MD_DATA,
@@ -34,12 +38,16 @@ function receivedMdPayload(uri, json) {
     }
 }
 
+// Private action creator - announcing that an error has occurred.
 function receivedMdError() {
     return {
         type: RECEIVED_MD_ERROR,
     }
 }
 
+/**
+ * Public meta-action announcing that a markdown url is being fetched.
+ */
 function fetchingMd(uri) {
     // This action creator makes an async action by returning a function instead
     // of an object. Thunk middleware, ensures the function when called, 
