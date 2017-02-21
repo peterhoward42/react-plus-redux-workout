@@ -17,9 +17,7 @@ import {
 } from 'react-bootstrap'
 
 import { ArticleNavBarContainer } from '../../containers/mobile/article-nav-bar-container'
-import { ArticleDescription } from '../article-description'
-import { ArticleTitlePanel } from '../article-title-panel'
-import { ArticleMedia } from '../article-media'
+import { ArticleViewTypeMultiplexer } from '../article-view-type-multiplexer'
 
 
 const ArticleScreen = (props) => {
@@ -29,16 +27,10 @@ const ArticleScreen = (props) => {
                 <ListGroupItem >
                     <ArticleNavBarContainer />
                 </ListGroupItem>
-                <ListGroupItem bsStyle="info">
-                    <ArticleTitlePanel article={props.article} />
-                </ListGroupItem>
                 <ListGroupItem>
                     <Panel>
-                        <ArticleMedia article={props.article} />
+                        <ArticleViewTypeMultiplexer article={props.article} />
                     </Panel>
-                </ListGroupItem>
-                <ListGroupItem >
-                    <ArticleDescription article={props.article} />
                 </ListGroupItem>
             </ListGroup>
         </div >

@@ -7,6 +7,7 @@
 
 
 const YOUTUBE_VIEW_T = 'youtubeview'
+const BITCOIN_VIEW_T = 'bitcoinview'
 
 const articlesSequence = [
     {
@@ -14,7 +15,7 @@ const articlesSequence = [
         short: 'A teaching article with accompanying code.',
         imageUrl: 'http://peterhoward42.wim42.webfactional.com/media/bitcoin.png',
         altText: 'Bitcoin',
-        viewType: YOUTUBE_VIEW_T,
+        viewType: BITCOIN_VIEW_T,
         articleSource: 'https://github.com/peterhoward42/merkle-tree-and-bitcoin/blob/master/README.md',
         description: 'a description about bitcoin stuff'
     },
@@ -51,5 +52,9 @@ const neighbourArticle = (originArticle, incrementIndexBy) => {
 
 
 export {
-    articlesSequence, articleFromTitle, neighbourArticle, YOUTUBE_VIEW_T
+    articlesSequence,
+    articleFromTitle,
+    neighbourArticle,
+    YOUTUBE_VIEW_T,
+    BITCOIN_VIEW_T
 }
