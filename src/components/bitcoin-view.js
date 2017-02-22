@@ -15,9 +15,17 @@ const BitcoinView = (props) => {
         <div>
             <Well>
                 <p className="lead">
-                    Bitcoin software faces some very interesting problems and
-                    has some very smart solutions.
+                    Bitcoin <em>(Blockchain)</em> has exceptionally clever
+                    answers to the security challenges it faces - based on
+                    Merkle Trees. This article explains how
+                    the <em>Blockchain</em> works, and how Merkle Trees work.
+                    </p>
+                <p>
+                    There's some simple demo
+                    code as well <em>(in Go)</em>) which provides a nice
+                    simple introduction to that language also.
                 </p>
+
             </Well>
             <Media>
                 <Media.Left>
@@ -38,7 +46,7 @@ const BitcoinView = (props) => {
                     <img width={90} height={90} src={fingerprint} alt="Fingerprint" />
                 </Media.Left>
                 <Media.Body>
-                    <Media.Heading>Authenticity</Media.Heading>
+                    <Media.Heading>Integrity</Media.Heading>
                     <p>
                         Then, how can we verify small data fragments using
                         checksum or hashing concepts, without fetching the

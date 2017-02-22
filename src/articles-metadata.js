@@ -5,26 +5,28 @@
  * in the menu.
  */
 
+import { BitcoinView } from './components/bitcoin-view'
+import { YoutubeView } from './components/youtube-view'
 
-const YOUTUBE_VIEW_T = 'youtubeview'
-const BITCOIN_VIEW_T = 'bitcoinview'
+import bitcoinImage from './assets/bitcoin.png'
+import lureImage from './assets/lure-image.jpg'
 
 const articlesSequence = [
     {
         title: 'Learn about Merkle Trees and Bitcoin',
         short: 'A teaching article with accompanying code.',
-        imageUrl: 'http://peterhoward42.wim42.webfactional.com/media/bitcoin.png',
+        imageUrl: bitcoinImage,
         altText: 'Bitcoin',
-        viewType: BITCOIN_VIEW_T,
+        viewElement: BitcoinView,
         articleSource: 'https://github.com/peterhoward42/merkle-tree-and-bitcoin/blob/master/README.md',
         description: 'a description about bitcoin stuff'
     },
     {
         title: 'The lure of patterns',
         short: 'Exploring a 6 dimensional design space with sliders',
-        imageUrl: 'http://peterhoward42.wim42.webfactional.com/media/lure-image.jpg',
+        imageUrl: lureImage,
         altText: 'Lure',
-        viewType: YOUTUBE_VIEW_T,
+        viewElement: YoutubeView,
         articleSource: 'ld_PXgPw3AI',
         description: 'a description about pattern stuff'
     }
@@ -55,6 +57,4 @@ export {
     articlesSequence,
     articleFromTitle,
     neighbourArticle,
-    YOUTUBE_VIEW_T,
-    BITCOIN_VIEW_T
 }

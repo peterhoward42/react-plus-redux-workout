@@ -9,18 +9,19 @@
 
 import React from 'react'
 
-import { YOUTUBE_VIEW_T, BITCOIN_VIEW_T } from '../articles-metadata'
 import { YoutubeView } from '../components/youtube-view'
 import { BitcoinView } from '../components/bitcoin-view'
 
 const ArticleViewTypeMultiplexer = (props) => {
-    switch (props.article.viewType) {
-        case YOUTUBE_VIEW_T:
-            return <YoutubeView videoId={props.article.articleSource} />
-        case BITCOIN_VIEW_T:
-            return <BitcoinView />
+    const viewElement = props.article.viewElement
+    switch (viewElement) {
+        case YoutubeView:
+            //return <YoutubeView videoId={props.article.articleSource} />
+            return viewElement({ videoId: props.article.articleSource })
+        case BitcoinView:
+            return viewElement('will it use this?')
         default:
-            throw new Error('Unrecognized view type: ' + props.article.viewType)
+            throw new Error('Unrecognized view element type: ' + viewElement)
     }
 }
 
