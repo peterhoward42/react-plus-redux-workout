@@ -5,8 +5,8 @@
  * in the menu.
  */
 
-import { BitcoinView } from './components/bitcoin-view'
-import { YoutubeView } from './components/youtube-view'
+import { BitcoinView } from './components/articles/bitcoin-view'
+import { LureOfPatternsView } from './components/articles/lure-of-patterns-view'
 
 import bitcoinImage from './assets/bitcoin.png'
 import lureImage from './assets/lure-image.jpg'
@@ -19,16 +19,14 @@ const articlesSequence = [
         altText: 'Bitcoin',
         viewElement: BitcoinView,
         articleSource: 'https://github.com/peterhoward42/merkle-tree-and-bitcoin/blob/master/README.md',
-        description: 'a description about bitcoin stuff'
     },
     {
         title: 'The lure of patterns',
         short: 'Exploring a 6 dimensional design space with sliders',
         imageUrl: lureImage,
         altText: 'Lure',
-        viewElement: YoutubeView,
+        viewElement: LureOfPatternsView,
         articleSource: 'ld_PXgPw3AI',
-        description: 'a description about pattern stuff'
     }
 ]
 
@@ -40,8 +38,10 @@ const articleFromTitle = (title) => {
 }
 
 /**
- * A query that returns the article that is <increment> beyond the given 
- * article in the sequence. The arithmetic wraps round at both ends.
+ * A query that tells you what article comes "next" after one you specify.
+ * Generalised for "previous" as well as "next" by letting you specify the
+ * offset you want as +1 or -1 (or in fact an arbitrary integer). The arithmetic 
+ * wraps round automatically at both ends if required.
  */
 const neighbourArticle = (originArticle, incrementIndexBy) => {
     const existingIndex = articlesSequence.indexOf(originArticle)

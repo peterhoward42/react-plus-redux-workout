@@ -1,14 +1,14 @@
 /**
- * This React element renders hard-coded content about the bitcoin article.
+ * This React element renders hard-coded html content about the bitcoin article.
  */
 
 import React from 'react'
 
 import { Well, Media } from 'react-bootstrap'
 
-import criminal from './../assets/criminal.jpg'
-import fingerprint from './../assets/fingerprint.jpg'
-import github from './../assets/github.png'
+import criminal from './../../assets/criminal.jpg'
+import fingerprint from './../../assets/fingerprint.jpg'
+import github from './../../assets/github.png'
 
 const BitcoinView = (props) => {
     return (
