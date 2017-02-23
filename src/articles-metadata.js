@@ -8,12 +8,12 @@
 import { BitcoinView } from './components/articles/bitcoin-view'
 import { LureOfPatternsView } from './components/articles/lure-of-patterns-view'
 import { GoGuiView } from './components/articles/go-gui-view'
-
-
+import { VRCadView } from './components/articles/vr-cad-view'
 
 import bitcoinImage from './assets/bitcoin.png'
 import lureImage from './assets/lure-image.jpg'
 import goGui from './assets/go-gui.png'
+import vrCad from './assets/open-mouth.png'
 
 const articlesSequence = [
     {
@@ -38,6 +38,14 @@ const articlesSequence = [
         imageUrl: goGui,
         altText: 'GUI in Go',
         viewElement: GoGuiView,
+        articleSource: 'unused',
+    },
+    {
+        title: 'Virtual Reality + CAD',
+        short: 'Let CAD designers swim around inside their models',
+        imageUrl: vrCad,
+        altText: 'Virtual reality plus CAD',
+        viewElement: VRCadView,
         articleSource: 'unused',
     }
 ]
