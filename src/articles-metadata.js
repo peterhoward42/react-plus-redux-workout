@@ -7,13 +7,17 @@
 
 import { BitcoinView } from './components/articles/bitcoin-view'
 import { LureOfPatternsView } from './components/articles/lure-of-patterns-view'
+import { GoGuiView } from './components/articles/go-gui-view'
+
+
 
 import bitcoinImage from './assets/bitcoin.png'
 import lureImage from './assets/lure-image.jpg'
+import goGui from './assets/go-gui.png'
 
 const articlesSequence = [
     {
-        title: 'Learn about Merkle Trees and Bitcoin',
+        title: 'Merkle Trees + Bitcoin',
         short: 'A teaching article with accompanying code.',
         imageUrl: bitcoinImage,
         altText: 'Bitcoin',
@@ -27,6 +31,14 @@ const articlesSequence = [
         altText: 'Lure',
         viewElement: LureOfPatternsView,
         articleSource: 'ld_PXgPw3AI',
+    },
+    {
+        title: 'Stand-alone GUI in Go',
+        short: 'Encapsulating the whole shooting match into a single exectuable.',
+        imageUrl: goGui,
+        altText: 'GUI in Go',
+        viewElement: GoGuiView,
+        articleSource: 'unused',
     }
 ]
 
