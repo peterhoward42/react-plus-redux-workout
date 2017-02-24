@@ -10,12 +10,14 @@ import { LureOfPatternsView } from './components/articles/lure-of-patterns-view'
 import { GoGuiView } from './components/articles/go-gui-view'
 import { VRCadView } from './components/articles/vr-cad-view'
 import { OOMechView } from './components/articles/oo-mech-view'
+import { MemoryView } from './components/articles/memory-view'
 
 import bitcoinImage from './assets/bitcoin.png'
 import lureImage from './assets/lure-image.jpg'
 import goGui from './assets/go-gui.png'
 import vrCad from './assets/open-mouth.png'
 import chevvy from './assets/chevvy.png'
+import memory from './assets/memory.png'
 
 const articlesSequence = [
     {
@@ -57,6 +59,14 @@ const articlesSequence = [
         altText: 'OOD for Mech Engineers',
         viewElement: OOMechView,
         articleSource: 'unused',
+    },
+    {
+        title: 'Memory Talk',
+        short: "A memory trick that's helped me enourmously",
+        imageUrl: memory,
+        altText: 'A memory talk',
+        viewElement: MemoryView,
+        articleSource: 'http://peterhoward42.wim42.webfactional.com/media/memory.mp3',
     }
 ]
 

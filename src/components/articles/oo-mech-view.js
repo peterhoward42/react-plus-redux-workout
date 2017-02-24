@@ -1,5 +1,6 @@
 /**
- * This React element renders hard-coded html content about the bitcoin article.
+ * This React element renders hard-coded html content about the OOD for
+ * mechanical engineers article.
  */
 
 import React from 'react'
@@ -21,7 +22,7 @@ const OOMechView = (props) => {
         <div>
             <Well>
                 <p className="lead">
-                    A fresh approach to explaining Object Oriented Design - by
+                    A fresh approach to explaining Object Oriented Design - with
                    a simple and direct comparison with assembling machines
                    from parts.
                     </p>

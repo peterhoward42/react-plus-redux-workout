@@ -1,5 +1,5 @@
 /**
- * This React element renders hard-coded html content about the bitcoin article.
+ * This React element renders hard-coded html content about the Go GUI article.
  */
 
 import React from 'react'
