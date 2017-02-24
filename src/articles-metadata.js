@@ -9,11 +9,13 @@ import { BitcoinView } from './components/articles/bitcoin-view'
 import { LureOfPatternsView } from './components/articles/lure-of-patterns-view'
 import { GoGuiView } from './components/articles/go-gui-view'
 import { VRCadView } from './components/articles/vr-cad-view'
+import { OOMechView } from './components/articles/oo-mech-view'
 
 import bitcoinImage from './assets/bitcoin.png'
 import lureImage from './assets/lure-image.jpg'
 import goGui from './assets/go-gui.png'
 import vrCad from './assets/open-mouth.png'
+import chevvy from './assets/chevvy.png'
 
 const articlesSequence = [
     {
@@ -46,6 +48,14 @@ const articlesSequence = [
         imageUrl: vrCad,
         altText: 'Virtual reality plus CAD',
         viewElement: VRCadView,
+        articleSource: 'unused',
+    },
+    {
+        title: 'OOD Demystified',
+        short: 'Explaining OO like a mechanical assembly',
+        imageUrl: chevvy,
+        altText: 'OOD for Mech Engineers',
+        viewElement: OOMechView,
         articleSource: 'unused',
     }
 ]
