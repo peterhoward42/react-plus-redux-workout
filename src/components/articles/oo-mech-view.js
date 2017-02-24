@@ -10,7 +10,10 @@ import ooGlum from '../../assets/oo-glum.png'
 import alternator from '../../assets/alternator.png'
 import steeringPre from '../../assets/steering-pre.png'
 import steeringWiggle from '../../assets/steering-wiggle.png'
-
+import smoothBox from '../../assets/smoother-blackbox.png'
+import tennis from '../../assets/tennis.png'
+import smoothedCode from '../../assets/smoothed-code.png'
+import smoothedResults from '../../assets/smoothed-results.png'
 
 
 const OOMechView = (props) => {
@@ -18,36 +21,10 @@ const OOMechView = (props) => {
         <div>
             <Well>
                 <p className="lead">
-                    Imagine if designers using CAD, could conjure their designs
-                   into physical products right in front of them. And then
-                   shrink themselves to the size of a mouse, climb inside a
-                   minituarised mini-sub, and then pilot their way around
-                   inside the product by steering the sub.
+                    A fresh approach to explaining Object Oriented Design - by
+                   a simple and direct comparison with assembling machines
+                   from parts.
                     </p>
-                <p>
-                    That's the vision for this research project.
-                </p>
-                <p>
-                    There's a taster explanation below, or read more with these
-                    links:
-                </p>
-                <ul>
-                    <li><a
-                        href='http://peterhoward42.wim42.webfactional.com/media/cadboard-project-vision.pdf'
-                        target="_blank">&nbsp;Vision &amp; System Design
-                        </a> (My paper)
-                    </li>
-                    <li><a
-                        href='http://www.cs.unc.edu/techreports/94-031.pdf'
-                        target="_blank">&nbsp;Robinett and Holloway
-                        </a> (Their brilliantly prescient 1994 work on the maths of VR)
-                    </li>
-                    <li><a
-                        href='https://github.com/peterhoward42/androidogles'
-                        target="_blank">&nbsp;Android OpenGL Code
-                        </a> The GitHub repo with my experimental code in.
-                    </li>
-                </ul>
             </Well>
             <Panel>
                 <Row>
@@ -162,7 +139,7 @@ const OOMechView = (props) => {
                         <p>
                             This Python code steers a boat by adjusting
                             the rudder by the amount needed to correct its
-                            course. But we're adding loads of <em>noise</em> to
+                            course. But we're adding loads of random <em>noise</em> to
                             the compass reading with the call
                             to <em>uniform</em>.
                         </p>
@@ -184,6 +161,109 @@ const OOMechView = (props) => {
                     </Col>
                 </Row>
             </Panel>
+            <Panel>
+                <Row>
+                    <Col sm={3}>
+                        <p>
+                            Let's (conceptually) bolt in
+                            a <em>smoother</em> black box. (An object)
+                        </p>
+                    </Col>
+                    <Col sm={9}>
+                        <Image src={smoothBox} responsive />
+                    </Col>
+                </Row>
+            </Panel>
+            <Panel>
+                <Row>
+                    <Col sm={3}>
+                        <p>
+                            Our smoother will keep hold of the last (N) readings
+                            and calculate the smoothed value by taking the
+                            average of the values it's holding at any one time.
+                        </p>
+                    </Col>
+                    <Col sm={9}>
+                        <Image src={tennis} responsive />
+                    </Col>
+                </Row>
+            </Panel>
+            <Panel>
+                <Row>
+                    <Col sm={3}>
+                        <p>
+                            So the modified code would be this.
+                        </p>
+                    </Col>
+                    <Col sm={9}>
+                        <Image src={smoothedCode} responsive />
+                    </Col>
+                </Row>
+            </Panel>
+            <Panel>
+                <Row>
+                    <Col sm={12}>
+                        <p>
+                            We introduce the <em>Smoother</em> class with
+                            the <em>import</em> statement. A class acts like a
+                            blueprint, or specification, or data sheet.
+                        </p>
+                        <p>
+                            Then using that blueprint, we
+                            make <em>(instantiate)</em> a smoother object and
+                            call it <em>compass_smoother</em>. And now we have
+                            it available to us, we send each reading to it,
+                            using a <em>method call</em> defined in the blueprint
+                            and ask for the smoothed value similarly.
+                        </p>
+                        <p>
+                            The code for the smoother lives in another module;
+                            analogously to a parts bin, or store. Parts that can
+                            picked up and used in any machine you choose.
+                        </p>
+                    </Col>
+                </Row>
+            </Panel>
+            <Panel>
+                <Row>
+                    <Col sm={3}>
+                        <p>
+                            Seems to work quite well
+                        </p>
+                    </Col>
+                    <Col sm={9}>
+                        <Image src={smoothedResults} responsive />
+                    </Col>
+                </Row>
+            </Panel>
+
+            <Well>
+                <Row>
+                    <Col sm={12}>
+                        <p>
+                            So now we have all the benefits the mechanical
+                            engineers had:
+                        </p>
+                        <ul>
+                            <li>
+                                Develop SMOOTHER separately from steering system
+                            </li>
+                            <li>
+                                Test it independently before integration
+                            </li>
+                            <li>
+                                Swap out for different SMOOTHER any time
+                            </li>
+                            <li>
+                                Steering designers don't have to know about smoother internals
+                            </li>
+                            <li>
+                                In fact probably just choose an open-source one!
+                            </li>
+                        </ul>
+                    </Col>
+                </Row>
+            </Well>
         </div>
     )
 }
