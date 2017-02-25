@@ -12,6 +12,7 @@ import { VRCadView } from './components/articles/vr-cad-view'
 import { OOMechView } from './components/articles/oo-mech-view'
 import { MemoryView } from './components/articles/memory-view'
 import { NetEdView } from './components/articles/net-ed-view'
+import { ArView } from './components/articles/ar-view'
 
 import bitcoinImage from './assets/bitcoin.png'
 import lureImage from './assets/lure-image.jpg'
@@ -20,6 +21,7 @@ import vrCad from './assets/open-mouth.png'
 import chevvy from './assets/chevvy.png'
 import memory from './assets/memory.png'
 import netEdThumb from './assets/neted-thumb.png'
+import arPlane from './assets/ar-plane.png'
 
 const articlesSequence = [
     {
@@ -76,6 +78,14 @@ const articlesSequence = [
         imageUrl: netEdThumb,
         altText: 'A network editor',
         viewElement: NetEdView,
+        articleSource: 'unused',
+    },
+    {
+        title: 'Augmented Reality',
+        short: "See Heathrow planes landing on your table",
+        imageUrl: arPlane,
+        altText: 'A plane',
+        viewElement: ArView,
         articleSource: 'unused',
     }
 ]
