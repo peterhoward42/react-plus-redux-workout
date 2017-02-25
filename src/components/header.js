@@ -9,8 +9,8 @@ import { Jumbotron } from 'react-bootstrap'
 
 const Header = () => (
     <Jumbotron >
-        <h1>Pete Howard</h1>
-        <p>A few examples from my personal projects.</p>
+        <h3>Pete Howard</h3>
+        <p>Showcase projects.</p>
     </Jumbotron >
 )
 

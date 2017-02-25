@@ -64,7 +64,7 @@ const GoGuiView = (props) => {
                     <Col sm={4}>
                         <p>
                             You need only a tiny fragment of code to make a
-                         web server in go, as you can see.
+                         web server in Go, as you can see.
                     </p>
                     </Col>
                     <Col sm={8}>

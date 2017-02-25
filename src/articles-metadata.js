@@ -13,6 +13,9 @@ import { OOMechView } from './components/articles/oo-mech-view'
 import { MemoryView } from './components/articles/memory-view'
 import { NetEdView } from './components/articles/net-ed-view'
 import { ArView } from './components/articles/ar-view'
+import { AngularView } from './components/articles/angular-view'
+import { PPView } from './components/articles/pp-view'
+import { TigerCadView } from './components/articles/tigercad-view'
 
 import bitcoinImage from './assets/bitcoin.png'
 import lureImage from './assets/lure-image.jpg'
@@ -22,6 +25,9 @@ import chevvy from './assets/chevvy.png'
 import memory from './assets/memory.png'
 import netEdThumb from './assets/neted-thumb.png'
 import arPlane from './assets/ar-plane.png'
+import angular from './assets/angular.png'
+import musicThumb from './assets/music-thumb.png'
+import cadThumb from './assets/cad-thumb.png'
 
 const articlesSequence = [
     {
@@ -86,6 +92,30 @@ const articlesSequence = [
         imageUrl: arPlane,
         altText: 'A plane',
         viewElement: ArView,
+        articleSource: 'unused',
+    },
+    {
+        title: 'AngularJS App',
+        short: "A demo project I made to teach myself Angular",
+        imageUrl: angular,
+        altText: 'Angular',
+        viewElement: AngularView,
+        articleSource: 'unused',
+    },
+    {
+        title: 'Python Music',
+        short: "A Python/PyQt app for editing and playing a piano score",
+        imageUrl: musicThumb,
+        altText: 'Music',
+        viewElement: PPView,
+        articleSource: 'unused',
+    },
+    {
+        title: 'C++ CAD',
+        short: "A C++ Tech Drawing App for Windows",
+        imageUrl: cadThumb,
+        altText: 'CAD',
+        viewElement: TigerCadView,
         articleSource: 'unused',
     }
 ]
