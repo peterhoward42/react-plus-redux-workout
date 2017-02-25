@@ -11,6 +11,7 @@ import { GoGuiView } from './components/articles/go-gui-view'
 import { VRCadView } from './components/articles/vr-cad-view'
 import { OOMechView } from './components/articles/oo-mech-view'
 import { MemoryView } from './components/articles/memory-view'
+import { NetEdView } from './components/articles/net-ed-view'
 
 import bitcoinImage from './assets/bitcoin.png'
 import lureImage from './assets/lure-image.jpg'
@@ -18,6 +19,7 @@ import goGui from './assets/go-gui.png'
 import vrCad from './assets/open-mouth.png'
 import chevvy from './assets/chevvy.png'
 import memory from './assets/memory.png'
+import netEdThumb from './assets/neted-thumb.png'
 
 const articlesSequence = [
     {
@@ -67,6 +69,14 @@ const articlesSequence = [
         altText: 'A memory talk',
         viewElement: MemoryView,
         articleSource: 'http://peterhoward42.wim42.webfactional.com/media/memory.mp3',
+    },
+    {
+        title: 'Java Diagram Editor',
+        short: "Java engineering graphics Design and Code",
+        imageUrl: netEdThumb,
+        altText: 'A network editor',
+        viewElement: NetEdView,
+        articleSource: 'unused',
     }
 ]
 
