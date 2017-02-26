@@ -120,6 +120,4 @@ const VRCadView = (props) => {
     )
 }
 
-// <img width={400} height={400} src={goGuiScreenShot} alt="GUI screenshot" />
-
 export { VRCadView }

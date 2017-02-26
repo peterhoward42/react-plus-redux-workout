@@ -16,6 +16,7 @@ import { ArView } from './components/articles/ar-view'
 import { AngularView } from './components/articles/angular-view'
 import { PPView } from './components/articles/pp-view'
 import { TigerCadView } from './components/articles/tigercad-view'
+import { FrostView } from './components/articles/frost-view'
 
 import bitcoinImage from './assets/bitcoin.png'
 import lureImage from './assets/lure-image.jpg'
@@ -28,6 +29,7 @@ import arPlane from './assets/ar-plane.png'
 import angular from './assets/angular.png'
 import musicThumb from './assets/music-thumb.png'
 import cadThumb from './assets/cad-thumb.png'
+import frostThumb from './assets/frost-thumb.png'
 
 const articlesSequence = [
     {
@@ -116,6 +118,14 @@ const articlesSequence = [
         imageUrl: cadThumb,
         altText: 'CAD',
         viewElement: TigerCadView,
+        articleSource: 'unused',
+    },
+    {
+        title: 'Cloud File Readers',
+        short: "New approach to reading legacy input file decks",
+        imageUrl: frostThumb,
+        altText: 'Frost application',
+        viewElement: FrostView,
         articleSource: 'unused',
     }
 ]
