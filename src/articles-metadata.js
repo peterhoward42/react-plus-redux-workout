@@ -17,6 +17,7 @@ import { AngularView } from './components/articles/angular-view'
 import { PPView } from './components/articles/pp-view'
 import { TigerCadView } from './components/articles/tigercad-view'
 import { FrostView } from './components/articles/frost-view'
+import { ReactReduxView } from './components/articles/react-redux-view'
 
 import bitcoinImage from './assets/bitcoin.png'
 import lureImage from './assets/lure-image.jpg'
@@ -30,8 +31,17 @@ import angular from './assets/angular.png'
 import musicThumb from './assets/music-thumb.png'
 import cadThumb from './assets/cad-thumb.png'
 import frostThumb from './assets/frost-thumb.png'
+import reactThumb from './assets/react-thumb.png'
 
 const articlesSequence = [
+    {
+        title: 'React + Redux',
+        short: "The JavaScript libraries this site is built with",
+        imageUrl: reactThumb,
+        altText: 'React and Redux',
+        viewElement: ReactReduxView,
+        articleSource: 'unused',
+    },
     {
         title: 'Merkle Trees + Bitcoin',
         short: 'A teaching article with accompanying code.',
@@ -127,7 +137,7 @@ const articlesSequence = [
         altText: 'Frost application',
         viewElement: FrostView,
         articleSource: 'unused',
-    }
+    },
 ]
 
 /**

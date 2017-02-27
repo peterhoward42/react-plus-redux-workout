@@ -1,1 +1,1 @@
-Just a playground for code I'm using to play around with React and Redux.
+The Peter Howard - Showcase website - implemented using React and Redux.
