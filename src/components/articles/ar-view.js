@@ -11,11 +11,14 @@ import arTargetAppears from '../../assets/ar-target-appears.png'
 import arMapAppears from '../../assets/ar-map-appears.png'
 import arPannedFurther from '../../assets/ar-panned-further.png'
 import { YouTubeAutoscale } from '../youtube-autoscale'
+import { ScrollToTop } from '../scroll-to-top'
+
 
 
 const ArView = (props) => {
     return (
         <div>
+            <ScrollToTop />
             <Well>
                 <p className="lead">
                     This is about an Augmented Reality (AR) App, implemented using

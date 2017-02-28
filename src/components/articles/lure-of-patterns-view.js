@@ -8,10 +8,13 @@ import { Well } from 'react-bootstrap'
 
 
 import { YouTubeAutoscale } from '../youtube-autoscale'
+import { ScrollToTop } from '../scroll-to-top'
+
 
 const LureOfPatternsView = (props) => {
     return (
         <div>
+            <ScrollToTop />
             <Well>
                 <p className="lead">
                     This is about the design of a GUI that helps you drill down

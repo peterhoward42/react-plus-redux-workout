@@ -9,11 +9,14 @@ import { Well, Image, Row, Col, Panel } from 'react-bootstrap'
 
 import netEdThumb from '../../assets/neted-thumb.png'
 import { YouTubeAutoscale } from '../youtube-autoscale'
+import { ScrollToTop } from '../scroll-to-top'
+
 
 
 const NetEdView = (props) => {
     return (
         <div>
+            <ScrollToTop />
             <Well>
                 <p className="lead">
                     This is about a Java graphics library to make applications

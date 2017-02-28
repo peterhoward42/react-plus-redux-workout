@@ -12,10 +12,13 @@ import hair from '../../assets/split-end.jpg'
 import gap from '../../assets/look-inside.png'
 import goInside from '../../assets/go-inside.png'
 import fly from '../../assets/fly-around.jpg'
+import { ScrollToTop } from '../scroll-to-top'
+
 
 const VRCadView = (props) => {
     return (
         <div>
+            <ScrollToTop />
             <Well>
                 <p className="lead">
                     Imagine if designers using CAD, could conjure their designs

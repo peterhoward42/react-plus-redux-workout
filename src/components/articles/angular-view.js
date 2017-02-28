@@ -9,11 +9,13 @@ import { Well, Image, Row, Col, Panel } from 'react-bootstrap'
 
 import angular from '../../assets/angular.png'
 import { YouTubeAutoscale } from '../youtube-autoscale'
+import { ScrollToTop } from '../scroll-to-top'
 
 
 const AngularView = (props) => {
     return (
         <div>
+            <ScrollToTop />
             <Well>
                 <p className="lead">
                     I've been following developments in front-end programming

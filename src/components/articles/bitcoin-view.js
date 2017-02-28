@@ -9,10 +9,13 @@ import { Well, Media } from 'react-bootstrap'
 import criminal from './../../assets/criminal.jpg'
 import fingerprint from './../../assets/fingerprint.jpg'
 import github from './../../assets/github.png'
+import { ScrollToTop } from '../scroll-to-top'
+
 
 const BitcoinView = (props) => {
     return (
         <div>
+            <ScrollToTop />
             <Well>
                 <p className="lead">
                     Bitcoin <em>(Blockchain)</em> has exceptionally clever

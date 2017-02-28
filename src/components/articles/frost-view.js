@@ -7,10 +7,13 @@ import React from 'react'
 import { Well, Image, Row, Col, Panel } from 'react-bootstrap'
 
 import frostSnip from '../../assets/frost-snip.png'
+import { ScrollToTop } from '../scroll-to-top'
+
 
 const FrostView = (props) => {
     return (
-        <div>
+        <div >
+            <ScrollToTop />
             <Well>
                 <p className="lead">
                     <em>FROST</em> - a cloud replacement for the thousands of lines of code
@@ -75,10 +78,10 @@ const FrostView = (props) => {
             <Panel>
                 <Row>
                     <Col sm={12}>
-                        <h4>Try it yourself&nbsp;
-                        <a
+                        <h4><span className="label label-default"> Try it yourself</span>
+                            <a
                                 href='http://frost-1001.appspot.com/playground/example/space-delim'
-                                target="_blank">&nbsp;Visit FROST
+                                target="_blank">&nbsp;visit the site
                         </a>
                         </h4>
                     </Col>

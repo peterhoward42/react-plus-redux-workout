@@ -22,12 +22,12 @@ const MenuItem = (props) => {
         <Media onClick={() => { props.onArticleChosen(props.title) }}>
             <Media.Left>
                 <img
-                    width={64} height={64}
+                    width={100} height={100}
                     src={props.imageUrl}
                     alt={props.altText} />
             </Media.Left>
             <Media.Body>
-                <Media.Heading>{props.title}</Media.Heading>
+                <h5>{props.title}</h5>
                 <p>{props.description}</p>
             </Media.Body>
         </Media>
@@ -35,3 +35,5 @@ const MenuItem = (props) => {
 }
 
 export { MenuItem }
+
+// <Media.Heading>{props.title}</Media.Heading>

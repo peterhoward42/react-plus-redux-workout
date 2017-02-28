@@ -5,11 +5,14 @@
 import React from 'react'
 
 import { Well, Row, Col, Panel } from 'react-bootstrap'
+import { ScrollToTop } from '../scroll-to-top'
+
 
 
 const ReactReduxView = (props) => {
     return (
         <div>
+            <ScrollToTop />
             <Well>
                 <p className="lead">
                     The front end for the site you're viewing right now, is built

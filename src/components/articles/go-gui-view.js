@@ -9,10 +9,13 @@ import { Well, Image, Row, Col, Panel } from 'react-bootstrap'
 import goGuiScreenShot from '../../assets/go-gui-screenshot.png'
 import goSvr from '../../assets/go-svr.png'
 import compileToStatic from '../../assets/compile-to-static.png'
+import { ScrollToTop } from '../scroll-to-top'
+
 
 const GoGuiView = (props) => {
     return (
         <div>
+            <ScrollToTop />
             <Well>
                 <p className="lead">
                     <em>Go</em> doesn't have a native GUI to make standalone apps.

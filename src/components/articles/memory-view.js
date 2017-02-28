@@ -6,6 +6,8 @@ import React from 'react'
 
 import { Well, Row, Col, Panel } from 'react-bootstrap'
 import AudioPlayer from 'react-responsive-audio-player'
+import { ScrollToTop } from '../scroll-to-top'
+
 
 // Without this import - the third party player doesn't have any controls.
 // eslint-disable-next-line
@@ -21,6 +23,7 @@ const playlist = (url) => ([
 const MemoryView = (props) => {
     return (
         <div>
+            <ScrollToTop />
             <Well>
                 <p className="lead">
                     My memory has caused me real problems. I've never found

@@ -9,11 +9,14 @@ import { Well, Image, Row, Col, Panel } from 'react-bootstrap'
 
 import musicWholeApp from '../../assets/music-whole-app.png'
 import { YouTubeAutoscale } from '../youtube-autoscale'
+import { ScrollToTop } from '../scroll-to-top'
+
 
 
 const PPView = (props) => {
     return (
         <div>
+            <ScrollToTop />
             <Well>
                 <p className="lead">
                     This is a desktop App that lets you edit piano sheet

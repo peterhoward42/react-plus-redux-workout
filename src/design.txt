@@ -1,3 +1,6 @@
+// This was the design intent before development.
+// It has survived conceptually, but some details evolved differently.
+
 Design Sequence 
 
     Component Hierarchy
@@ -14,7 +17,7 @@ Coding Sequence
             those with substance
             just combiners
         Tests
-    components iterively top down including containers
+    components iteratively top down including containers
 
 Component Hierarchy
 

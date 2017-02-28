@@ -15,11 +15,14 @@ import smoothBox from '../../assets/smoother-blackbox.png'
 import tennis from '../../assets/tennis.png'
 import smoothedCode from '../../assets/smoothed-code.png'
 import smoothedResults from '../../assets/smoothed-results.png'
+import { ScrollToTop } from '../scroll-to-top'
+
 
 
 const OOMechView = (props) => {
     return (
         <div>
+            <ScrollToTop />
             <Well>
                 <p className="lead">
                     A fresh approach to explaining Object Oriented Design - with

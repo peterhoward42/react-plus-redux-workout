@@ -9,11 +9,14 @@ import { Well, Image, Row, Col, Panel } from 'react-bootstrap'
 
 import cadFull from '../../assets/cad-full.png'
 import { YouTubeAutoscale } from '../youtube-autoscale'
+import { ScrollToTop } from '../scroll-to-top'
+
 
 
 const TigerCadView = (props) => {
     return (
         <div>
+            <ScrollToTop />
             <Well>
                 <p className="lead">
                     This is a desktop 2D CAD Application written in
