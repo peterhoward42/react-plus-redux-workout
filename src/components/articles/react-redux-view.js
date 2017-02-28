@@ -53,7 +53,7 @@ const ReactReduxView = (props) => {
                             You can get a sense of these reusable components
                             from the
                             <a
-                                href='https://github.com/peterhoward42/react-plus-redux-workout/tree/master/src/components'
+                                href='https://github.com/peterhoward42/showcase-website/tree/master/src/components'
                                 target="_blank">&nbsp;<em>components</em>
                             </a> directory of this site's source code.
                         </p>
@@ -99,7 +99,7 @@ const ReactReduxView = (props) => {
                             (including unit tests) by looking at the <em>actions</em> and
                             the <em>reducers</em> directories in the
                             <a
-                                href='https://github.com/peterhoward42/react-plus-redux-workout'
+                                href='https://github.com/peterhoward42/showcase-website'
                                 target="_blank">&nbsp;source code
                             </a> on GitHub.
                         </p>
