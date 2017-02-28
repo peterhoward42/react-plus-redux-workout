@@ -15,7 +15,7 @@ Coding Sequence
         Actions
         reducers
             those with substance
-            just combiners
+            just combiners.
         Tests
     components iteratively top down including containers
 
